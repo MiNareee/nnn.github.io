@@ -8,6 +8,7 @@
   <script src="https://rawgit.com/feiss/aframe-environment-component/master/dist/aframe-environment-component.min.js"></script>
   <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
   <script type="text/javascript">
+    <script type="text/javascript">
 FRAME.registerComponent('startButton', {
  init: function () {
     var cube = document.querySelector("#boxId");
@@ -17,10 +18,10 @@ FRAME.registerComponent('startButton', {
     cube.addEventListener("mouseup",function(evt){
         cube.setAttribute('material', 'color',"blue");
     });
- }
+  </script>
   <body>
   <a-scene>
-    <a-box color="#EF2D5E" position="0 1 -4" change-color-on-hover="color: blue"></a-box>
+    <a-box id='#boxId' color="#EF2D5E" position="0 1 -4"></a-box>
 
     <a-camera><a-cursor></a-cursor></a-camera>
   </a-scene>
