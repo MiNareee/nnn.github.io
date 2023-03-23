@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MR Valentines</title>
+  <script src="https://rawgit.com/feiss/aframe-environment-component/master/dist/aframe-environment-component.min.js"></script>
+  <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+  <script type="text/javascript">
+FRAME.registerComponent('startButton', {
+ init: function () {
+    var cube = document.querySelector("#boxId");
+    cube.addEventListener("mousedown",function(evt){
+        cube.setAttribute('material', 'color',"red");
+    });
+    cube.addEventListener("mouseup",function(evt){
+        cube.setAttribute('material', 'color',"blue");
+    });
+ }
+  <body>
+  <a-scene>
+    <a-box color="#EF2D5E" position="0 1 -4" change-color-on-hover="color: blue"></a-box>
+
+    <a-camera><a-cursor></a-cursor></a-camera>
+  </a-scene>
+</body>
+  </html>
+
+<!-- <script type="text/javascript">
+ AFRAME.registerComponent('startButton', {
+   init: function () {
+     var cube = document.querySelector('a-scene').sceneEl.querySelector("#boxId");
+     cube.addEventListener("mousedown", function (evt) {
+       cube.setAttribute('material', 'color', 'red');
+     });
+     cube.addEventListener("mouseup", function (evt) {
+       cube.setAttribute('material', 'color', 'green');//we want to change this from "blue" to "green" to avoid some bugs
+     });
+     cube.addEventListener("mouseenter", function (evt) {
+       cube.setAttribute('material', 'color', 'green');
+     });
+     cube.addEventListener("mouseleave", function (evt) {
+       cube.setAttribute('material', 'color', 'blue');
+     });
+   }
+ });
+    </script>-->
+ 
